@@ -1,6 +1,7 @@
 // main.cpp
 #include "include/MusicDatabase.h"
 #include "include/APIServer.h"
+#include "include/JsonFileGenerator.h"
 #include <iostream>
 #include <string>
 #include <vector>
@@ -63,14 +64,32 @@ int main() {
         }
 
         // Serialize JSON to string
-        std::string jsonStr = jsonTitleResults.dump(4);
+        std::string jsonStr = jsonTitleResults.dump(2);
+        // Find the position of the first '[' and last ']'
+        size_t firstBracketPos = jsonStr.find('[');
+        size_t lastBracketPos = jsonStr.find_last_of(']');
 
+        // Replace '[' with '{' and ']' with '}' only if they exist
+         // Replace the first '[' with '{' and the last ']' with '}', if they exist
+        // if (!jsonStr.empty() && jsonStr[0] == '[' && jsonStr.back() == ']') {
+        //     jsonStr[0] = '{';
+        //     jsonStr[jsonStr.size() - 1] = '}';
+        // }
+        //std::string jsonStrWithoutBrackets = jsonStr.substr(1, jsonStr.size() - 2);
         // Execute Python script with JSON string as argument
         std::string command = "../api.py '" + jsonStr + "'";
         std::cout << jsonStr << std::endl;
         system(command.c_str());
 
+        JsonFileGenerator fileGenerator;
 
+        // Generate the JSON file
+        std::string filename = "output.json";
+        if (fileGenerator.generateJsonFile(jsonStr, filename)) {
+            std::cout << "JSON file generated successfully." << std::endl;
+        } else {
+            std::cerr << "Failed to generate JSON file." << std::endl;
+        }
         
 
         // Pass the search results to the API

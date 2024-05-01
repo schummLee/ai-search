@@ -8,7 +8,7 @@ set(CMAKE_CXX_STANDARD_REQUIRED True)
 include_directories(include)
 
 # Add executable target
-add_executable(music_search main.cpp src/MusicDatabase.cpp src/APIServer.cpp)
+add_executable(music_search main.cpp src/MusicDatabase.cpp src/APIServer.cpp src/JsonFileGenerator.cpp)
 
 # Link against OpenSSL library
 find_package(OpenSSL REQUIRED)

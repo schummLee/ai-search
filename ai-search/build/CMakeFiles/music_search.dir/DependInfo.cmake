@@ -10,6 +10,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "/mnt/d/code/ai-search/ai-search/main.cpp" "CMakeFiles/music_search.dir/main.cpp.o" "gcc" "CMakeFiles/music_search.dir/main.cpp.o.d"
   "/mnt/d/code/ai-search/ai-search/src/APIServer.cpp" "CMakeFiles/music_search.dir/src/APIServer.cpp.o" "gcc" "CMakeFiles/music_search.dir/src/APIServer.cpp.o.d"
+  "/mnt/d/code/ai-search/ai-search/src/JsonFileGenerator.cpp" "CMakeFiles/music_search.dir/src/JsonFileGenerator.cpp.o" "gcc" "CMakeFiles/music_search.dir/src/JsonFileGenerator.cpp.o.d"
   "/mnt/d/code/ai-search/ai-search/src/MusicDatabase.cpp" "CMakeFiles/music_search.dir/src/MusicDatabase.cpp.o" "gcc" "CMakeFiles/music_search.dir/src/MusicDatabase.cpp.o.d"
   )
 

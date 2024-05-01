@@ -177,6 +177,30 @@ src/APIServer.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/music_search.dir/build.make CMakeFiles/music_search.dir/src/APIServer.cpp.s
 .PHONY : src/APIServer.cpp.s
 
+src/JsonFileGenerator.o: src/JsonFileGenerator.cpp.o
+.PHONY : src/JsonFileGenerator.o
+
+# target to build an object file
+src/JsonFileGenerator.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/music_search.dir/build.make CMakeFiles/music_search.dir/src/JsonFileGenerator.cpp.o
+.PHONY : src/JsonFileGenerator.cpp.o
+
+src/JsonFileGenerator.i: src/JsonFileGenerator.cpp.i
+.PHONY : src/JsonFileGenerator.i
+
+# target to preprocess a source file
+src/JsonFileGenerator.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/music_search.dir/build.make CMakeFiles/music_search.dir/src/JsonFileGenerator.cpp.i
+.PHONY : src/JsonFileGenerator.cpp.i
+
+src/JsonFileGenerator.s: src/JsonFileGenerator.cpp.s
+.PHONY : src/JsonFileGenerator.s
+
+# target to generate assembly for a file
+src/JsonFileGenerator.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/music_search.dir/build.make CMakeFiles/music_search.dir/src/JsonFileGenerator.cpp.s
+.PHONY : src/JsonFileGenerator.cpp.s
+
 src/MusicDatabase.o: src/MusicDatabase.cpp.o
 .PHONY : src/MusicDatabase.o
 
@@ -216,6 +240,9 @@ help:
 	@echo "... src/APIServer.o"
 	@echo "... src/APIServer.i"
 	@echo "... src/APIServer.s"
+	@echo "... src/JsonFileGenerator.o"
+	@echo "... src/JsonFileGenerator.i"
+	@echo "... src/JsonFileGenerator.s"
 	@echo "... src/MusicDatabase.o"
 	@echo "... src/MusicDatabase.i"
 	@echo "... src/MusicDatabase.s"

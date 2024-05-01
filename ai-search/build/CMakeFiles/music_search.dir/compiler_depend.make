@@ -1019,6 +1019,7 @@ CMakeFiles/music_search.dir/main.cpp.o: ../main.cpp \
   /usr/include/boost/asio/ssl/detail/shutdown_op.hpp \
   /usr/include/boost/asio/ssl/detail/write_op.hpp \
   ../include/MusicDatabase.h \
+  ../include/JsonFileGenerator.h \
   ../include/json.hpp \
   /usr/include/c++/11/forward_list \
   /usr/include/c++/11/bits/forward_list.h \
@@ -3217,6 +3218,8 @@ CMakeFiles/music_search.dir/src/MusicDatabase.cpp.o: ../src/MusicDatabase.cpp \
 /usr/include/x86_64-linux-gnu/bits/environments.h:
 
 /usr/include/x86_64-linux-gnu/c++/11/bits/opt_random.h:
+
+../include/JsonFileGenerator.h:
 
 /usr/include/c++/11/bits/locale_facets.tcc:
 

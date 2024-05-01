@@ -3,6 +3,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/music_search.dir/main.cpp.o.d"
   "CMakeFiles/music_search.dir/src/APIServer.cpp.o"
   "CMakeFiles/music_search.dir/src/APIServer.cpp.o.d"
+  "CMakeFiles/music_search.dir/src/JsonFileGenerator.cpp.o"
+  "CMakeFiles/music_search.dir/src/JsonFileGenerator.cpp.o.d"
   "CMakeFiles/music_search.dir/src/MusicDatabase.cpp.o"
   "CMakeFiles/music_search.dir/src/MusicDatabase.cpp.o.d"
   "music_search"

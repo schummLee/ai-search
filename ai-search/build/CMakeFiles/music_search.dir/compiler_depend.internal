@@ -1020,6 +1020,7 @@ CMakeFiles/music_search.dir/main.cpp.o
  /usr/include/boost/asio/ssl/detail/shutdown_op.hpp
  /usr/include/boost/asio/ssl/detail/write_op.hpp
  /mnt/d/code/ai-search/ai-search/include/MusicDatabase.h
+ /mnt/d/code/ai-search/ai-search/include/JsonFileGenerator.h
  /mnt/d/code/ai-search/ai-search/include/json.hpp
  /usr/include/c++/11/forward_list
  /usr/include/c++/11/bits/forward_list.h

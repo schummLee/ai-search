@@ -33,6 +33,15 @@ def receive_json():
         except Exception as e:
             return jsonify({"error": str(e)}), 400
 
+@app.route('/get_fake_data', methods=['GET'])
+def get_fake_data():
+    try:
+        # Return the fake JSON data
+        
+        return jsonify({"data": fake_json_data}), 200
+    except Exception as e:
+        return jsonify({"error": str(e)}), 500
+
 def main():
     # Run the Flask app on 127.0.0.1:9091
     app.run(host='127.0.0.1', port=9091, debug=True)

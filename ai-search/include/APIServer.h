@@ -4,6 +4,7 @@
 #include <cpprest/http_listener.h>
 #include <cpprest/json.h>
 #include <string>
+#include "MusicDatabase.h" // Include the MusicDatabase header file
 
 using namespace web;
 using namespace web::http;
@@ -17,7 +18,8 @@ public:
     void stop();
     void closeListener();
 private:
-    http_listener listener;
+    http_listener m_listener; // Declare m_listener as a member
+    MusicDatabase m_musicDB; // Declare m_musicDB as a member
     void handle_get(http_request request);
 };
 

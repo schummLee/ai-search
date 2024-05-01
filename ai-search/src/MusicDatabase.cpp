@@ -27,44 +27,44 @@ bool MusicDatabase::loadFromCSV(const std::string& filename) {
 // Function to load music data from MySQL
 std::vector<MusicTrack> MusicDatabase::loadFromMySQL(const std::string& host, const std::string& user, const std::string& password, const std::string& database) {
     std::vector<MusicTrack> tracks;
-    // try {
-    //     sql::mysql::MySQL_Driver *driver;
-    //     sql::Connection *con;
-    //     sql::PreparedStatement *pstmt;
-    //     sql::ResultSet *res;
+    try {
+        sql::mysql::MySQL_Driver *driver;
+        sql::Connection *con;
+        sql::PreparedStatement *pstmt;
+        sql::ResultSet *res;
 
-    //     driver = sql::mysql::get_mysql_driver_instance();
-    //     if (!driver) {
-    //         std::cerr << "Failed to get MySQL driver instance" << std::endl;
-    //         return tracks; // Return empty vector
-    //     }
+        driver = sql::mysql::get_mysql_driver_instance();
+        if (!driver) {
+            std::cerr << "Failed to get MySQL driver instance" << std::endl;
+            return tracks; // Return empty vector
+        }
 
-    //     con = driver->connect(host, user, password);
-    //     if (!con) {
-    //         std::cerr << "Failed to connect to MySQL server" << std::endl;
-    //         return tracks; // Return empty vector
-    //     }
+        con = driver->connect(host, user, password);
+        if (!con) {
+            std::cerr << "Failed to connect to MySQL server" << std::endl;
+            return tracks; // Return empty vector
+        }
 
-    //     con->setSchema(database);
+        con->setSchema(database);
 
-    //     pstmt = con->prepareStatement("SELECT * FROM music_info LIMIT 10");
-    //     res = pstmt->executeQuery();
+        pstmt = con->prepareStatement("SELECT * FROM music_info LIMIT 10");
+        res = pstmt->executeQuery();
 
-    //     while (res->next()) {
-    //         MusicTrack track;
-    //         track.title = res->getString("title");
-    //         track.artist = res->getString("artist");
-    //         track.genre = res->getString("genre");
-    //         tracks.push_back(track);
-    //     }
+        while (res->next()) {
+            MusicTrack track;
+            track.title = res->getString("title");
+            track.artist = res->getString("artist");
+            track.genre = res->getString("genre");
+            tracks.push_back(track);
+        }
 
-    //     delete res;
-    //     delete pstmt;
-    //     delete con;
+        delete res;
+        delete pstmt;
+        delete con;
 
-    // } catch (const sql::SQLException& e) {
-    //     std::cerr << "MySQL Error: " << e.what() << std::endl;
-    // }
+    } catch (const sql::SQLException& e) {
+        std::cerr << "MySQL Error: " << e.what() << std::endl;
+    }
     return tracks;
 }
 

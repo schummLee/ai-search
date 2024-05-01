@@ -1,25 +1,31 @@
+// main.cpp
 #include "include/MusicDatabase.h"
 #include "include/APIServer.h"
 #include <iostream>
 #include <string>
+#include <vector>
+#include "include/json.hpp"
+#include <cstdlib>
+
+using nlohmann_json = nlohmann::json;
 
 int main() {
     // Create an instance of MusicDatabase
     MusicDatabase musicDB;
+    std::vector<MusicTrack> titleResults;
 
     // Connect to MySQL database and load music data
-    std::string host = "tcp://localhost:3306";   // Hostname or IP address of the MySQL server
-    std::string user = "root";        // Default MySQL username
-    std::string password = "";        // Default MySQL password
+    std::string host = "localhost";   // Hostname or IP address of the MySQL server
+    std::string user = "lee";        // Default MySQL username
+    std::string password = "password";        // Default MySQL password
     std::string database = "music_db";
     if (musicDB.loadFromMySQL(host, user, password, database).empty()) {
-        std::cerr << "Failed to load music data from MySQL database.example dataset applied" << std::endl;
+        std::cerr << "Failed to load music data from MySQL database. Example dataset applied." << std::endl;
         MusicTrack newTrack;
         newTrack.genre = "example";
         newTrack.artist = "me";
         newTrack.title = "perfect";
     }
-
 
     // Create an instance of APIServer
     APIServer apiServer("http://localhost:8080");
@@ -42,7 +48,30 @@ int main() {
         }
 
         // Search for the title in MySQL database
-        std::vector<MusicTrack> titleResults = musicDB.searchByTitle(userInput);
+        titleResults = musicDB.loadFromMySQL(host,user,password,database);
+
+        // Convert titleResults to JSON using nlohmann/json library
+        nlohmann_json jsonTitleResults = nlohmann_json::array();
+
+        // Iterate over the titleResults vector and add each MusicTrack object to the JSON array
+        for (const auto& track : titleResults) {
+            nlohmann_json trackJson;
+            trackJson["title"] = track.title;
+            trackJson["artist"] = track.artist;
+            trackJson["genre"] = track.genre;
+            jsonTitleResults.push_back(trackJson);
+        }
+
+        // Serialize JSON to string
+        std::string jsonStr = jsonTitleResults.dump(4);
+
+        // Execute Python script with JSON string as argument
+        std::string command = "../api.py '" + jsonStr + "'";
+        std::cout << jsonStr << std::endl;
+        system(command.c_str());
+
+
+        
 
         // Pass the search results to the API
         // Example: Implement API endpoint to handle search results

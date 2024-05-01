@@ -6,8 +6,6 @@ set(CMAKE_CXX_STANDARD_REQUIRED True)
 
 # Include directories
 include_directories(include)
-include_directories(lib)
-
 
 # Add executable target
 add_executable(music_search main.cpp src/MusicDatabase.cpp src/APIServer.cpp)
@@ -16,19 +14,18 @@ add_executable(music_search main.cpp src/MusicDatabase.cpp src/APIServer.cpp)
 find_package(OpenSSL REQUIRED)
 target_link_libraries(music_search OpenSSL::SSL OpenSSL::Crypto)
 
-
-# Specify the path to MySQL Connector/C library folder
-link_directories(${CMAKE_CURRENT_SOURCE_DIR}/lib)
-
-# Link MySQL connector library
-# Specify the path to MySQL Connector/C++ library include folder
-include_directories(/usr/local/mysql-connector-c++-8.4.0/include/jdbc)
-
-# Specify the path to MySQL Connector/C++ library folder
-link_directories(/usr/local/mysql-connector-c++-8.4.0/include/jdbc)
-
 # Find cpprestsdk
 find_package(cpprestsdk REQUIRED)
 
 # Link cpprestsdk library
 target_link_libraries(music_search cpprestsdk::cpprest)
+
+# Find MySQL Connector/C++ library
+find_library(MYSQL_CPP_CONN_LIB mysqlcppconn PATHS /usr/lib/x86_64-linux-gnu)
+
+if(NOT MYSQL_CPP_CONN_LIB)
+    message(FATAL_ERROR "MySQL Connector/C++ library not found.")
+endif()
+
+# Link MySQL Connector/C++ library
+target_link_libraries(music_search ${MYSQL_CPP_CONN_LIB})

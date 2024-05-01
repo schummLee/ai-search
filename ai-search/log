@@ -1,0 +1,5 @@
+-- Configuring done (0.1s)
+-- Generating done (0.0s)
+-- Build files have been written to: /Users/a23a23/selfmade/ai-search/build
+[ 25%] Building CXX object CMakeFiles/music_search.dir/main.cpp.o
+Build failed. Exiting.

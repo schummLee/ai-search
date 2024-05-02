@@ -91,7 +91,7 @@ std::vector<UserData> MusicDatabase::PassToMySQL(const std::string& host, const 
         con->setSchema(database);
 
         // Prepare the insert statement
-        pstmt = con->prepareStatement("INSERT INTO u_user (name, song, count) VALUES (?, ?, ?)");
+        pstmt = con->prepareStatement("INSERT INTO u_user (username, song_record, song_count,email) VALUES (?, ?, ?,5)");
 
         // Insert each track into the database
         

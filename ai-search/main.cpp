@@ -51,18 +51,18 @@ int main() {
         }
 
         // Read the largest number from JSON file names
-    std::string largestNumber = fileGenerator.readLargestNumberFromFile();
-    if (largestNumber.empty()) {
-        std::cerr << "Failed to read largest number from JSON file names." << std::endl;
-        return 1; // Return error code
-    }
-
+    // std::string largestNumber = fileGenerator.readLargestNumberFromFile();
+    // if (largestNumber.empty()) {
+    //     std::cerr << "Failed to read largest number from JSON file names." << std::endl;
+    //     return 1; // Return error code
+    // }
+    std::string largestNumber = "test";
     // Create a vector to hold UserData with the largest number as name
     std::vector<MusicData> musicDataList;
     UserData threeDatas;
     std::vector<UserData> insertedData;
 
-    if (!fileGenerator.readJsonFile(largestNumber + ".json", musicDataList)) {
+    if (!fileGenerator.readJsonFile("../upload/static/" + largestNumber + ".json", musicDataList)) {
         std::cerr << "Failed to read JSON file." << std::endl;
         return 1; // Return error code
     }

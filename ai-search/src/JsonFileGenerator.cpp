@@ -4,6 +4,22 @@
 #include <vector>
 #include <sstream>
 #include <string>
+#include "json.hpp"
+using json = nlohmann::json;
+
+struct MusicData {
+    int songsPlayed;
+    struct MostPlayed {
+        long long lastPlayed;
+        int playCount;
+        bool isYoutube;
+        std::string title;
+        std::string artist;
+        std::string album;
+        std::string id;
+    } mostPlayed;
+    std::string name;
+};
 
 JsonFileGenerator::JsonFileGenerator() {}
 
@@ -21,36 +37,31 @@ bool JsonFileGenerator::generateJsonFile(const std::string& jsonStr, const std::
     }
 }
 
-bool JsonFileGenerator::readJsonFile(const std::string& filename, std::vector<Data>& dataList) {
-    std::ifstream inputFile(filename);
-    if (!inputFile.is_open()) {
-        std::cerr << "Error: Failed to open JSON file for reading\n";
+bool readJsonFile(const std::string& filename, MusicData& data) {
+    try {
+        std::ifstream file(filename);
+        if (!file.is_open()) {
+            std::cerr << "Failed to open file: " << filename << std::endl;
+            return false;
+        }
+
+        json jsonData;
+        file >> jsonData;
+
+        // Extract data from JSON
+        data.songsPlayed = jsonData["songsPlayed"];
+        data.name = jsonData["name"];
+        data.mostPlayed.lastPlayed = jsonData["mostPlayed"]["lastPlayed"];
+        data.mostPlayed.playCount = jsonData["mostPlayed"]["playCount"];
+        data.mostPlayed.isYoutube = jsonData["mostPlayed"]["isYoutube"];
+        data.mostPlayed.title = jsonData["mostPlayed"]["title"];
+        data.mostPlayed.artist = jsonData["mostPlayed"]["artist"];
+        data.mostPlayed.album = jsonData["mostPlayed"]["album"];
+        data.mostPlayed.id = jsonData["mostPlayed"]["id"];
+
+        return true;
+    } catch (const std::exception& e) {
+        std::cerr << "Error while reading JSON file: " << e.what() << std::endl;
         return false;
     }
-
-    // Read the entire file contents into a string
-    std::ostringstream oss;
-    oss << inputFile.rdbuf();
-    std::string jsonString = oss.str();
-
-    // Simple JSON parsing
-    size_t pos = jsonString.find("\"name\":");
-    while (pos != std::string::npos) {
-        Data data;
-        size_t endPos = jsonString.find("}", pos);
-        std::string entry = jsonString.substr(pos, endPos - pos);
-        size_t namePos = entry.find("\"", 7);
-        size_t nameEndPos = entry.find("\"", namePos + 1);
-        data.name = entry.substr(namePos + 1, nameEndPos - namePos - 1);
-        size_t songPos = entry.find("\"song\":");
-        size_t songEndPos = entry.find("\"", songPos + 8);
-        data.song = entry.substr(songPos + 8, songEndPos - songPos - 8);
-        size_t countPos = entry.find("\"count\":");
-        size_t countEndPos = entry.find(",", countPos + 8);
-        data.count = std::stoi(entry.substr(countPos + 8, countEndPos - countPos - 8));
-        dataList.push_back(data);
-        pos = jsonString.find("\"name\":", endPos);
-    }
-
-    return true;
 }

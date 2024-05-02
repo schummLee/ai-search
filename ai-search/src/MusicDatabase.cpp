@@ -68,7 +68,7 @@ std::vector<MusicTrack> MusicDatabase::loadFromMySQL(const std::string& host, co
     return tracks;
 }
 
-std::vector<UserData> MusicDatabase::PassToMySQL(const std::string& host, const std::string& user, const std::string& password, const std::string& database, const std::vector<UserData>& datas) {
+std::vector<UserData> MusicDatabase::PassToMySQL(const std::string& host, const std::string& user, const std::string& password, const std::string& database, const UserData& datas) {
     std::vector<UserData> insertedDatas;
 
     try {
@@ -97,9 +97,8 @@ std::vector<UserData> MusicDatabase::PassToMySQL(const std::string& host, const 
         for (const auto& data : datas) {
             pstmt->setString(1, data.name);
             pstmt->setString(2, data.song);
-            // For demonstration purposes, let's assume count corresponds to a field in the database
-            // If not, you'll need to adjust this part accordingly
-            pstmt->setInt(3, data.count); // Assuming genre is the count in this example
+            
+            pstmt->setInt(3, data.count); 
             pstmt->execute();
             insertedDatas.push_back(data);
         }

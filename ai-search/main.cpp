@@ -8,12 +8,14 @@
 #include "include/json.hpp"
 #include <cstdlib>
 
+
 using nlohmann_json = nlohmann::json;
 
 int main() {
     // Create an instance of MusicDatabase
     MusicDatabase musicDB;
     std::vector<MusicTrack> titleResults;
+    JsonFileGenerator jsonExec;
 
     // Connect to MySQL database and load music data
     std::string host = "localhost";   // Hostname or IP address of the MySQL server
@@ -47,6 +49,40 @@ int main() {
         if (userInput == "q") {
             break;
         }
+
+        // Read the largest number from JSON file names
+    std::string largestNumber = jsonExec.readLargestNumberFromFile();
+    if (largestNumber.empty()) {
+        std::cerr << "Failed to read largest number from JSON file names." << std::endl;
+        return 1; // Return error code
+    }
+
+    // Create a vector to hold UserData with the largest number as name
+    std::vector<MusicData> musicDataList;
+    UserData threeDatas;
+    std::vector<UserData> insertedData;
+
+    if (!jsonExec.readJsonFile(largestNumber + ".json", musicDataList)) {
+        std::cerr << "Failed to read JSON file." << std::endl;
+        return 1; // Return error code
+    }
+    
+    threeDatas.name = musicDataList[0].name;
+    threeDatas.song = musicDataList[0].mostPlayed.title;
+    threeDatas.count = musicDataList[0].mostPlayed.playCount;
+       
+    // Pass vector of UserData to PassToMySQL function
+    insertedData = musicDB.PassToMySQL(host, user, password, database, threeDatas);
+    
+    // Check if insertion was successful
+    if (insertedData.size() == 1) {
+        std::cout << "UserData inserted successfully:" << std::endl;
+        std::cout << "Name: " << insertedData[0].name << std::endl;
+        // Print other fields if needed
+    } else {
+        std::cerr << "Failed to insert UserData into MySQL." << std::endl;
+        return 1; // Return error code
+    }
 
         // Search for the title in MySQL database
         titleResults = musicDB.loadFromMySQL(host,user,password,database);

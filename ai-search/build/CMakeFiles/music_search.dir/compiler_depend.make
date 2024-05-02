@@ -194,6 +194,39 @@ CMakeFiles/music_search.dir/main.cpp.o: ../main.cpp \
   /usr/include/c++/11/bits/stl_vector.h \
   /usr/include/c++/11/bits/stl_bvector.h \
   /usr/include/c++/11/bits/vector.tcc \
+  /usr/include/c++/11/filesystem \
+  /usr/include/c++/11/bits/fs_fwd.h \
+  /usr/include/c++/11/chrono \
+  /usr/include/c++/11/ratio \
+  /usr/include/c++/11/limits \
+  /usr/include/c++/11/ctime \
+  /usr/include/c++/11/bits/parse_numbers.h \
+  /usr/include/c++/11/bits/fs_path.h \
+  /usr/include/c++/11/utility \
+  /usr/include/c++/11/bits/stl_relops.h \
+  /usr/include/c++/11/locale \
+  /usr/include/c++/11/bits/locale_facets_nonio.h \
+  /usr/include/x86_64-linux-gnu/c++/11/bits/time_members.h \
+  /usr/include/x86_64-linux-gnu/c++/11/bits/messages_members.h \
+  /usr/include/libintl.h \
+  /usr/include/c++/11/bits/locale_facets_nonio.tcc \
+  /usr/include/c++/11/bits/locale_conv.h \
+  /usr/include/c++/11/bits/unique_ptr.h \
+  /usr/include/c++/11/tuple \
+  /usr/include/c++/11/array \
+  /usr/include/c++/11/bits/uses_allocator.h \
+  /usr/include/c++/11/bits/invoke.h \
+  /usr/include/c++/11/iomanip \
+  /usr/include/c++/11/bits/quoted_string.h \
+  /usr/include/c++/11/codecvt \
+  /usr/include/c++/11/ext/concurrence.h \
+  /usr/include/c++/11/bits/shared_ptr.h \
+  /usr/include/c++/11/bits/shared_ptr_base.h \
+  /usr/include/c++/11/bits/allocated_ptr.h \
+  /usr/include/c++/11/bits/refwrap.h \
+  /usr/include/c++/11/ext/aligned_buffer.h \
+  /usr/include/c++/11/bits/fs_dir.h \
+  /usr/include/c++/11/bits/fs_ops.h \
   ../include/APIServer.h \
   /usr/include/cpprest/http_listener.h \
   /usr/include/cpprest/http_msg.h \
@@ -242,26 +275,8 @@ CMakeFiles/music_search.dir/main.cpp.o: ../main.cpp \
   /usr/include/c++/11/bits/atomic_base.h \
   /usr/include/c++/11/bits/atomic_lockfree_defines.h \
   /usr/include/c++/11/condition_variable \
-  /usr/include/c++/11/chrono \
-  /usr/include/c++/11/ratio \
-  /usr/include/c++/11/limits \
-  /usr/include/c++/11/ctime \
-  /usr/include/c++/11/bits/parse_numbers.h \
   /usr/include/c++/11/bits/std_mutex.h \
   /usr/include/c++/11/bits/unique_lock.h \
-  /usr/include/c++/11/bits/shared_ptr.h \
-  /usr/include/c++/11/bits/shared_ptr_base.h \
-  /usr/include/c++/11/bits/allocated_ptr.h \
-  /usr/include/c++/11/bits/refwrap.h \
-  /usr/include/c++/11/bits/invoke.h \
-  /usr/include/c++/11/bits/unique_ptr.h \
-  /usr/include/c++/11/utility \
-  /usr/include/c++/11/bits/stl_relops.h \
-  /usr/include/c++/11/tuple \
-  /usr/include/c++/11/array \
-  /usr/include/c++/11/bits/uses_allocator.h \
-  /usr/include/c++/11/ext/aligned_buffer.h \
-  /usr/include/c++/11/ext/concurrence.h \
   /usr/include/c++/11/mutex \
   /usr/include/pplx/pplxinterface.h \
   /usr/include/c++/11/memory \
@@ -1033,22 +1048,7 @@ CMakeFiles/music_search.dir/main.cpp.o: ../main.cpp \
   /usr/include/c++/11/bits/gslice.h \
   /usr/include/c++/11/bits/gslice_array.h \
   /usr/include/c++/11/bits/mask_array.h \
-  /usr/include/c++/11/bits/indirect_array.h \
-  /usr/include/c++/11/filesystem \
-  /usr/include/c++/11/bits/fs_fwd.h \
-  /usr/include/c++/11/bits/fs_path.h \
-  /usr/include/c++/11/locale \
-  /usr/include/c++/11/bits/locale_facets_nonio.h \
-  /usr/include/x86_64-linux-gnu/c++/11/bits/time_members.h \
-  /usr/include/x86_64-linux-gnu/c++/11/bits/messages_members.h \
-  /usr/include/libintl.h \
-  /usr/include/c++/11/bits/locale_facets_nonio.tcc \
-  /usr/include/c++/11/bits/locale_conv.h \
-  /usr/include/c++/11/iomanip \
-  /usr/include/c++/11/bits/quoted_string.h \
-  /usr/include/c++/11/codecvt \
-  /usr/include/c++/11/bits/fs_dir.h \
-  /usr/include/c++/11/bits/fs_ops.h
+  /usr/include/c++/11/bits/indirect_array.h
 
 CMakeFiles/music_search.dir/src/APIServer.cpp.o: ../src/APIServer.cpp \
   /usr/include/stdc-predef.h \
@@ -2066,7 +2066,22 @@ CMakeFiles/music_search.dir/src/APIServer.cpp.o: ../src/APIServer.cpp \
   /usr/include/boost/asio/ssl/detail/read_op.hpp \
   /usr/include/boost/asio/ssl/detail/shutdown_op.hpp \
   /usr/include/boost/asio/ssl/detail/write_op.hpp \
-  ../include/MusicDatabase.h
+  ../include/MusicDatabase.h \
+  /usr/include/c++/11/filesystem \
+  /usr/include/c++/11/bits/fs_fwd.h \
+  /usr/include/c++/11/bits/fs_path.h \
+  /usr/include/c++/11/locale \
+  /usr/include/c++/11/bits/locale_facets_nonio.h \
+  /usr/include/x86_64-linux-gnu/c++/11/bits/time_members.h \
+  /usr/include/x86_64-linux-gnu/c++/11/bits/messages_members.h \
+  /usr/include/libintl.h \
+  /usr/include/c++/11/bits/locale_facets_nonio.tcc \
+  /usr/include/c++/11/bits/locale_conv.h \
+  /usr/include/c++/11/iomanip \
+  /usr/include/c++/11/bits/quoted_string.h \
+  /usr/include/c++/11/codecvt \
+  /usr/include/c++/11/bits/fs_dir.h \
+  /usr/include/c++/11/bits/fs_ops.h
 
 CMakeFiles/music_search.dir/src/JsonFileGenerator.cpp.o: ../src/JsonFileGenerator.cpp \
   /usr/include/stdc-predef.h \
@@ -2225,46 +2240,77 @@ CMakeFiles/music_search.dir/src/JsonFileGenerator.cpp.o: ../src/JsonFileGenerato
   /usr/include/c++/11/bits/stl_vector.h \
   /usr/include/c++/11/bits/stl_bvector.h \
   /usr/include/c++/11/bits/vector.tcc \
-  /usr/include/c++/11/iostream \
-  /usr/include/c++/11/ostream \
-  /usr/include/c++/11/ios \
+  /usr/include/c++/11/filesystem \
+  /usr/include/c++/11/bits/fs_fwd.h \
+  /usr/include/c++/11/system_error \
+  /usr/include/x86_64-linux-gnu/c++/11/bits/error_constants.h \
+  /usr/include/c++/11/stdexcept \
   /usr/include/c++/11/exception \
   /usr/include/c++/11/bits/exception_ptr.h \
   /usr/include/c++/11/bits/cxxabi_init_exception.h \
   /usr/include/c++/11/typeinfo \
   /usr/include/c++/11/bits/nested_exception.h \
-  /usr/include/c++/11/bits/ios_base.h \
+  /usr/include/c++/11/chrono \
+  /usr/include/c++/11/ratio \
+  /usr/include/c++/11/limits \
+  /usr/include/c++/11/ctime \
+  /usr/include/c++/11/bits/parse_numbers.h \
+  /usr/include/c++/11/bits/fs_path.h \
+  /usr/include/c++/11/utility \
+  /usr/include/c++/11/bits/stl_relops.h \
+  /usr/include/c++/11/locale \
   /usr/include/c++/11/bits/locale_classes.h \
   /usr/include/c++/11/bits/locale_classes.tcc \
-  /usr/include/c++/11/system_error \
-  /usr/include/x86_64-linux-gnu/c++/11/bits/error_constants.h \
-  /usr/include/c++/11/stdexcept \
-  /usr/include/c++/11/streambuf \
-  /usr/include/c++/11/bits/streambuf.tcc \
-  /usr/include/c++/11/bits/basic_ios.h \
   /usr/include/c++/11/bits/locale_facets.h \
   /usr/include/c++/11/cwctype \
   /usr/include/wctype.h \
   /usr/include/x86_64-linux-gnu/bits/wctype-wchar.h \
   /usr/include/x86_64-linux-gnu/c++/11/bits/ctype_base.h \
+  /usr/include/c++/11/bits/ios_base.h \
+  /usr/include/c++/11/streambuf \
+  /usr/include/c++/11/bits/streambuf.tcc \
   /usr/include/c++/11/bits/streambuf_iterator.h \
   /usr/include/x86_64-linux-gnu/c++/11/bits/ctype_inline.h \
   /usr/include/c++/11/bits/locale_facets.tcc \
-  /usr/include/c++/11/bits/basic_ios.tcc \
-  /usr/include/c++/11/bits/ostream.tcc \
-  /usr/include/c++/11/istream \
-  /usr/include/c++/11/bits/istream.tcc \
-  /usr/include/c++/11/fstream \
+  /usr/include/c++/11/bits/locale_facets_nonio.h \
+  /usr/include/x86_64-linux-gnu/c++/11/bits/time_members.h \
+  /usr/include/x86_64-linux-gnu/c++/11/bits/messages_members.h \
+  /usr/include/libintl.h \
   /usr/include/c++/11/bits/codecvt.h \
+  /usr/include/c++/11/bits/locale_facets_nonio.tcc \
+  /usr/include/c++/11/bits/locale_conv.h \
+  /usr/include/c++/11/bits/unique_ptr.h \
+  /usr/include/c++/11/tuple \
+  /usr/include/c++/11/array \
+  /usr/include/c++/11/bits/uses_allocator.h \
+  /usr/include/c++/11/bits/invoke.h \
+  /usr/include/c++/11/iomanip \
+  /usr/include/c++/11/bits/quoted_string.h \
+  /usr/include/c++/11/sstream \
+  /usr/include/c++/11/istream \
+  /usr/include/c++/11/ios \
+  /usr/include/c++/11/bits/basic_ios.h \
+  /usr/include/c++/11/bits/basic_ios.tcc \
+  /usr/include/c++/11/ostream \
+  /usr/include/c++/11/bits/ostream.tcc \
+  /usr/include/c++/11/bits/istream.tcc \
+  /usr/include/c++/11/bits/sstream.tcc \
+  /usr/include/c++/11/codecvt \
+  /usr/include/c++/11/ext/concurrence.h \
+  /usr/include/c++/11/bits/shared_ptr.h \
+  /usr/include/c++/11/bits/shared_ptr_base.h \
+  /usr/include/c++/11/bits/allocated_ptr.h \
+  /usr/include/c++/11/bits/refwrap.h \
+  /usr/include/c++/11/ext/aligned_buffer.h \
+  /usr/include/c++/11/bits/fs_dir.h \
+  /usr/include/c++/11/bits/fs_ops.h \
+  /usr/include/c++/11/iostream \
+  /usr/include/c++/11/fstream \
   /usr/include/x86_64-linux-gnu/c++/11/bits/basic_file.h \
   /usr/include/x86_64-linux-gnu/c++/11/bits/c++io.h \
   /usr/include/c++/11/bits/fstream.tcc \
-  /usr/include/c++/11/sstream \
-  /usr/include/c++/11/bits/sstream.tcc \
   ../include/json.hpp \
   /usr/include/c++/11/algorithm \
-  /usr/include/c++/11/utility \
-  /usr/include/c++/11/bits/stl_relops.h \
   /usr/include/c++/11/bits/stl_algo.h \
   /usr/include/c++/11/bits/algorithmfwd.h \
   /usr/include/c++/11/bits/stl_heap.h \
@@ -2272,14 +2318,8 @@ CMakeFiles/music_search.dir/src/JsonFileGenerator.cpp.o: ../src/JsonFileGenerato
   /usr/include/c++/11/bits/uniform_int_dist.h \
   /usr/include/c++/11/pstl/glue_algorithm_defs.h \
   /usr/include/c++/11/functional \
-  /usr/include/c++/11/tuple \
-  /usr/include/c++/11/array \
-  /usr/include/c++/11/bits/uses_allocator.h \
-  /usr/include/c++/11/bits/invoke.h \
-  /usr/include/c++/11/bits/refwrap.h \
   /usr/include/c++/11/bits/std_function.h \
   /usr/include/c++/11/unordered_map \
-  /usr/include/c++/11/ext/aligned_buffer.h \
   /usr/include/c++/11/bits/hashtable.h \
   /usr/include/c++/11/bits/hashtable_policy.h \
   /usr/include/c++/11/bits/enable_special_members.h \
@@ -2294,11 +2334,6 @@ CMakeFiles/music_search.dir/src/JsonFileGenerator.cpp.o: ../src/JsonFileGenerato
   /usr/include/c++/11/bits/stl_raw_storage_iter.h \
   /usr/include/c++/11/bits/align.h \
   /usr/include/c++/11/bit \
-  /usr/include/c++/11/bits/unique_ptr.h \
-  /usr/include/c++/11/bits/shared_ptr.h \
-  /usr/include/c++/11/bits/shared_ptr_base.h \
-  /usr/include/c++/11/bits/allocated_ptr.h \
-  /usr/include/c++/11/ext/concurrence.h \
   /usr/include/c++/11/bits/shared_ptr_atomic.h \
   /usr/include/c++/11/bits/atomic_base.h \
   /usr/include/c++/11/bits/atomic_lockfree_defines.h \
@@ -2324,7 +2359,6 @@ CMakeFiles/music_search.dir/src/JsonFileGenerator.cpp.o: ../src/JsonFileGenerato
   /usr/include/x86_64-linux-gnu/bits/mathcalls-narrow.h \
   /usr/include/x86_64-linux-gnu/bits/iscanonical.h \
   /usr/include/c++/11/bits/specfun.h \
-  /usr/include/c++/11/limits \
   /usr/include/c++/11/tr1/gamma.tcc \
   /usr/include/c++/11/tr1/special_function_util.h \
   /usr/include/c++/11/tr1/bessel_function.tcc \
@@ -2352,25 +2386,6 @@ CMakeFiles/music_search.dir/src/JsonFileGenerator.cpp.o: ../src/JsonFileGenerato
   /usr/include/c++/11/cstring \
   /usr/include/string.h \
   /usr/include/strings.h \
-  /usr/include/c++/11/filesystem \
-  /usr/include/c++/11/bits/fs_fwd.h \
-  /usr/include/c++/11/chrono \
-  /usr/include/c++/11/ratio \
-  /usr/include/c++/11/ctime \
-  /usr/include/c++/11/bits/parse_numbers.h \
-  /usr/include/c++/11/bits/fs_path.h \
-  /usr/include/c++/11/locale \
-  /usr/include/c++/11/bits/locale_facets_nonio.h \
-  /usr/include/x86_64-linux-gnu/c++/11/bits/time_members.h \
-  /usr/include/x86_64-linux-gnu/c++/11/bits/messages_members.h \
-  /usr/include/libintl.h \
-  /usr/include/c++/11/bits/locale_facets_nonio.tcc \
-  /usr/include/c++/11/bits/locale_conv.h \
-  /usr/include/c++/11/iomanip \
-  /usr/include/c++/11/bits/quoted_string.h \
-  /usr/include/c++/11/codecvt \
-  /usr/include/c++/11/bits/fs_dir.h \
-  /usr/include/c++/11/bits/fs_ops.h \
   /usr/include/c++/11/numeric \
   /usr/include/c++/11/bits/stl_numeric.h \
   /usr/include/c++/11/pstl/glue_numeric_defs.h \
@@ -2569,20 +2584,46 @@ CMakeFiles/music_search.dir/src/MusicDatabase.cpp.o: ../src/MusicDatabase.cpp \
   /usr/include/c++/11/bits/stl_vector.h \
   /usr/include/c++/11/bits/stl_bvector.h \
   /usr/include/c++/11/bits/vector.tcc \
+  /usr/include/c++/11/filesystem \
+  /usr/include/c++/11/bits/fs_fwd.h \
+  /usr/include/c++/11/chrono \
+  /usr/include/c++/11/ratio \
+  /usr/include/c++/11/limits \
+  /usr/include/c++/11/ctime \
+  /usr/include/c++/11/bits/parse_numbers.h \
+  /usr/include/c++/11/bits/fs_path.h \
+  /usr/include/c++/11/utility \
+  /usr/include/c++/11/bits/stl_relops.h \
+  /usr/include/c++/11/locale \
+  /usr/include/c++/11/bits/locale_facets_nonio.h \
+  /usr/include/x86_64-linux-gnu/c++/11/bits/time_members.h \
+  /usr/include/x86_64-linux-gnu/c++/11/bits/messages_members.h \
+  /usr/include/libintl.h \
+  /usr/include/c++/11/bits/locale_facets_nonio.tcc \
+  /usr/include/c++/11/bits/locale_conv.h \
+  /usr/include/c++/11/bits/unique_ptr.h \
+  /usr/include/c++/11/tuple \
+  /usr/include/c++/11/array \
+  /usr/include/c++/11/bits/uses_allocator.h \
+  /usr/include/c++/11/bits/invoke.h \
+  /usr/include/c++/11/iomanip \
+  /usr/include/c++/11/bits/quoted_string.h \
+  /usr/include/c++/11/codecvt \
+  /usr/include/c++/11/ext/concurrence.h \
+  /usr/include/c++/11/bits/shared_ptr.h \
+  /usr/include/c++/11/bits/shared_ptr_base.h \
+  /usr/include/c++/11/bits/allocated_ptr.h \
+  /usr/include/c++/11/bits/refwrap.h \
+  /usr/include/c++/11/ext/aligned_buffer.h \
+  /usr/include/c++/11/bits/fs_dir.h \
+  /usr/include/c++/11/bits/fs_ops.h \
   ../include/MySQLConnector.h \
   /usr/include/mysql_connection.h \
   /usr/include/cppconn/connection.h \
   /usr/include/c++/11/map \
   /usr/include/c++/11/bits/stl_tree.h \
-  /usr/include/c++/11/ext/aligned_buffer.h \
   /usr/include/c++/11/bits/node_handle.h \
   /usr/include/c++/11/bits/stl_map.h \
-  /usr/include/c++/11/tuple \
-  /usr/include/c++/11/utility \
-  /usr/include/c++/11/bits/stl_relops.h \
-  /usr/include/c++/11/array \
-  /usr/include/c++/11/bits/uses_allocator.h \
-  /usr/include/c++/11/bits/invoke.h \
   /usr/include/c++/11/bits/stl_multimap.h \
   /usr/include/c++/11/bits/erase_if.h \
   /usr/include/cppconn/build_config.h \
@@ -2592,12 +2633,6 @@ CMakeFiles/music_search.dir/src/MusicDatabase.cpp.o: ../src/MusicDatabase.cpp \
   /usr/include/c++/11/bits/stl_raw_storage_iter.h \
   /usr/include/c++/11/bits/align.h \
   /usr/include/c++/11/bit \
-  /usr/include/c++/11/bits/unique_ptr.h \
-  /usr/include/c++/11/bits/shared_ptr.h \
-  /usr/include/c++/11/bits/shared_ptr_base.h \
-  /usr/include/c++/11/bits/allocated_ptr.h \
-  /usr/include/c++/11/bits/refwrap.h \
-  /usr/include/c++/11/ext/concurrence.h \
   /usr/include/c++/11/bits/shared_ptr_atomic.h \
   /usr/include/c++/11/bits/atomic_base.h \
   /usr/include/c++/11/bits/atomic_lockfree_defines.h \
@@ -2709,18 +2744,6 @@ CMakeFiles/music_search.dir/src/MusicDatabase.cpp.o: ../src/MusicDatabase.cpp \
 ../include/MySQLConnector.h:
 
 ../src/MusicDatabase.cpp:
-
-/usr/include/c++/11/bits/fs_ops.h:
-
-/usr/include/c++/11/bits/quoted_string.h:
-
-/usr/include/x86_64-linux-gnu/c++/11/bits/time_members.h:
-
-/usr/include/c++/11/bits/locale_facets_nonio.h:
-
-/usr/include/c++/11/bits/fs_path.h:
-
-/usr/include/c++/11/bits/fs_fwd.h:
 
 /usr/include/c++/11/bits/indirect_array.h:
 
@@ -2972,10 +2995,6 @@ CMakeFiles/music_search.dir/src/MusicDatabase.cpp.o: ../src/MusicDatabase.cpp \
 
 /usr/include/boost/date_time/date.hpp:
 
-/usr/include/c++/11/bits/locale_facets_nonio.tcc:
-
-/usr/include/boost/date_time/gregorian/gregorian_types.hpp:
-
 /usr/include/boost/date_time/int_adapter.hpp:
 
 /usr/include/boost/type_traits/integral_constant.hpp:
@@ -3035,10 +3054,6 @@ CMakeFiles/music_search.dir/src/MusicDatabase.cpp.o: ../src/MusicDatabase.cpp \
 /usr/include/boost/smart_ptr/bad_weak_ptr.hpp:
 
 /usr/include/boost/smart_ptr/detail/shared_count.hpp:
-
-/usr/include/c++/11/iomanip:
-
-/usr/include/boost/shared_ptr.hpp:
 
 /usr/include/boost/config/auto_link.hpp:
 
@@ -3190,10 +3205,6 @@ CMakeFiles/music_search.dir/src/MusicDatabase.cpp.o: ../src/MusicDatabase.cpp \
 
 /usr/include/openssl/buffer.h:
 
-/usr/include/c++/11/bits/fs_dir.h:
-
-/usr/include/openssl/x509.h:
-
 /usr/include/openssl/comperr.h:
 
 /usr/include/openssl/comp.h:
@@ -3243,10 +3254,6 @@ CMakeFiles/music_search.dir/src/MusicDatabase.cpp.o: ../src/MusicDatabase.cpp \
 /usr/include/boost/asio/detail/chrono.hpp:
 
 /usr/include/boost/asio/handler_continuation_hook.hpp:
-
-/usr/include/c++/11/filesystem:
-
-/usr/include/boost/asio/impl/system_context.hpp:
 
 /usr/include/boost/asio/detail/thread_group.hpp:
 
@@ -3374,55 +3381,27 @@ CMakeFiles/music_search.dir/src/MusicDatabase.cpp.o: ../src/MusicDatabase.cpp \
 
 /usr/include/boost/asio/detail/posix_global.hpp:
 
-/usr/include/c++/11/bits/stl_relops.h:
+/usr/include/boost/asio/detail/impl/handler_tracking.ipp:
 
-/usr/include/boost/mpl/aux_/config/has_apply.hpp:
+/usr/include/boost/asio/handler_invoke_hook.hpp:
 
-/usr/include/limits.h:
+/usr/include/boost/asio/detail/handler_invoke_helpers.hpp:
 
-/usr/include/c++/11/bits/refwrap.h:
+/usr/include/boost/mpl/aux_/static_cast.hpp:
 
-/usr/include/linux/stddef.h:
+/usr/include/boost/asio/ssl/stream_base.hpp:
 
-/usr/include/boost/date_time/gregorian_calendar.hpp:
+/usr/include/boost/asio/detail/std_fenced_block.hpp:
 
-/usr/include/c++/11/bits/parse_numbers.h:
+/usr/include/boost/asio/impl/system_executor.hpp:
 
-/usr/include/boost/asio/multiple_exceptions.hpp:
+/usr/include/openssl/sslerr_legacy.h:
 
-/usr/include/c++/11/ratio:
+/usr/include/boost/asio/traits/submit_member.hpp:
 
-/usr/include/c++/11/bits/unique_lock.h:
+/usr/include/boost/asio/execution/detail/submit_receiver.hpp:
 
-/usr/include/boost/mpl/aux_/config/workaround.hpp:
-
-/usr/include/c++/11/bits/uses_allocator.h:
-
-/usr/include/x86_64-linux-gnu/bits/types/struct_sigstack.h:
-
-/usr/include/boost/config.hpp:
-
-/usr/include/cppconn/driver.h:
-
-/usr/include/boost/numeric/conversion/int_float_mixture_enum.hpp:
-
-/usr/include/openssl/crypto.h:
-
-/usr/include/x86_64-linux-gnu/bits/unistd_ext.h:
-
-/usr/include/x86_64-linux-gnu/bits/getopt_posix.h:
-
-/usr/include/time.h:
-
-/usr/include/boost/date_time/compiler_config.hpp:
-
-/usr/include/x86_64-linux-gnu/c++/11/bits/os_defines.h:
-
-/usr/include/x86_64-linux-gnu/bits/posix_opt.h:
-
-/usr/include/c++/11/condition_variable:
-
-/usr/include/x86_64-linux-gnu/bits/sigstksz.h:
+/usr/include/boost/asio/execution/submit.hpp:
 
 /usr/include/boost/asio/detail/posix_thread.hpp:
 
@@ -3454,11 +3433,63 @@ CMakeFiles/music_search.dir/src/MusicDatabase.cpp.o: ../src/MusicDatabase.cpp \
 
 /usr/include/stdio.h:
 
+/usr/include/c++/11/bits/fs_ops.h:
+
+/usr/include/c++/11/bits/refwrap.h:
+
+/usr/include/linux/stddef.h:
+
+/usr/include/c++/11/bits/quoted_string.h:
+
+/usr/include/boost/asio/detail/scheduler_operation.hpp:
+
+/usr/include/x86_64-linux-gnu/bits/signum-generic.h:
+
+/usr/include/boost/mpl/aux_/config/workaround.hpp:
+
+/usr/include/c++/11/bits/uses_allocator.h:
+
+/usr/include/c++/11/bits/unique_lock.h:
+
+/usr/include/c++/11/array:
+
+/usr/include/c++/11/tr1/beta_function.tcc:
+
+/usr/include/boost/asio/associated_allocator.hpp:
+
+/usr/include/boost/smart_ptr/detail/sp_convertible.hpp:
+
+/usr/include/boost/config/platform/linux.hpp:
+
+/usr/include/x86_64-linux-gnu/c++/11/bits/time_members.h:
+
+/usr/include/c++/11/bits/locale_facets_nonio.h:
+
+/usr/include/c++/11/bits/stl_relops.h:
+
+/usr/include/boost/mpl/aux_/config/has_apply.hpp:
+
+/usr/include/limits.h:
+
+/usr/include/boost/date_time/gregorian_calendar.hpp:
+
+/usr/include/c++/11/bits/parse_numbers.h:
+
+/usr/include/boost/asio/multiple_exceptions.hpp:
+
+/usr/include/c++/11/ratio:
+
+/usr/include/c++/11/bits/fs_fwd.h:
+
 /usr/include/c++/11/bits/valarray_before.h:
 
 /usr/include/c++/11/bits/stl_bvector.h:
 
 /usr/include/x86_64-linux-gnu/bits/types/clockid_t.h:
+
+/usr/include/boost/asio/impl/system_context.hpp:
+
+/usr/include/c++/11/filesystem:
 
 /usr/include/openssl/x509_vfy.h:
 
@@ -3488,14 +3519,6 @@ CMakeFiles/music_search.dir/src/MusicDatabase.cpp.o: ../src/MusicDatabase.cpp \
 
 /usr/include/c++/11/bits/codecvt.h:
 
-/usr/include/boost/mpl/aux_/config/preprocessor.hpp:
-
-/usr/include/openssl/conferr.h:
-
-/usr/include/x86_64-linux-gnu/bits/environments.h:
-
-/usr/include/x86_64-linux-gnu/c++/11/bits/opt_random.h:
-
 ../include/JsonFileGenerator.h:
 
 /usr/include/c++/11/bits/locale_facets.tcc:
@@ -3514,11 +3537,9 @@ CMakeFiles/music_search.dir/src/MusicDatabase.cpp.o: ../src/MusicDatabase.cpp \
 
 /usr/include/c++/11/bits/basic_ios.h:
 
-/usr/include/c++/11/bits/atomic_lockfree_defines.h:
+/usr/include/boost/asio/traits/submit_free.hpp:
 
-/usr/include/boost/mpl/if.hpp:
-
-/usr/include/boost/asio/execution/sender.hpp:
+/usr/include/c++/11/bits/uniform_int_dist.h:
 
 /usr/include/string.h:
 
@@ -3566,21 +3587,19 @@ CMakeFiles/music_search.dir/src/MusicDatabase.cpp.o: ../src/MusicDatabase.cpp \
 
 /usr/include/x86_64-linux-gnu/bits/types/__sigval_t.h:
 
-/usr/include/x86_64-linux-gnu/bits/getopt_core.h:
-
-/usr/include/c++/11/bits/functexcept.h:
-
 /usr/include/x86_64-linux-gnu/c++/11/bits/c++io.h:
 
 /usr/include/cpprest/http_headers.h:
 
+/usr/include/openssl/x509.h:
+
+/usr/include/c++/11/bits/fs_dir.h:
+
+/usr/include/boost/system/detail/system_category_posix.hpp:
+
 /usr/include/c++/11/cerrno:
 
 /usr/include/x86_64-linux-gnu/bits/types/cookie_io_functions_t.h:
-
-/usr/include/x86_64-linux-gnu/bits/sigthread.h:
-
-/usr/include/c++/11/chrono:
 
 /usr/include/x86_64-linux-gnu/bits/wordsize.h:
 
@@ -3590,17 +3609,17 @@ CMakeFiles/music_search.dir/src/MusicDatabase.cpp.o: ../src/MusicDatabase.cpp \
 
 /usr/include/alloca.h:
 
-/usr/include/boost/asio/execution/submit.hpp:
+/usr/include/c++/11/bits/fs_path.h:
+
+/usr/include/x86_64-linux-gnu/bits/siginfo-consts-arch.h:
+
+/usr/include/c++/11/tr1/special_function_util.h:
 
 /usr/include/boost/asio/detail/handler_cont_helpers.hpp:
 
 /usr/include/c++/11/bits/shared_ptr.h:
 
 /usr/include/boost/asio/execution/detail/as_invocable.hpp:
-
-/usr/include/x86_64-linux-gnu/bits/siginfo-consts-arch.h:
-
-/usr/include/c++/11/tr1/special_function_util.h:
 
 /usr/include/x86_64-linux-gnu/bits/byteswap.h:
 
@@ -3630,17 +3649,9 @@ CMakeFiles/music_search.dir/src/MusicDatabase.cpp.o: ../src/MusicDatabase.cpp \
 
 /usr/include/stdlib.h:
 
-/usr/include/boost/mpl/aux_/static_cast.hpp:
-
-/usr/include/boost/asio/ssl/stream_base.hpp:
-
-/usr/include/boost/asio/detail/std_fenced_block.hpp:
-
 /usr/include/boost/date_time/gregorian/greg_ymd.hpp:
 
 /usr/include/c++/11/bits/functional_hash.h:
-
-/usr/include/boost/asio/detail/impl/handler_tracking.ipp:
 
 /usr/include/cppconn/resultset.h:
 
@@ -3698,9 +3709,17 @@ CMakeFiles/music_search.dir/src/MusicDatabase.cpp.o: ../src/MusicDatabase.cpp \
 
 /usr/include/x86_64-linux-gnu/asm/posix_types_64.h:
 
-/usr/include/asm-generic/int-ll64.h:
+/usr/include/boost/date_time/compiler_config.hpp:
 
-/usr/include/c++/11/atomic:
+/usr/include/x86_64-linux-gnu/c++/11/bits/os_defines.h:
+
+/usr/include/boost/mpl/aux_/config/preprocessor.hpp:
+
+/usr/include/openssl/conferr.h:
+
+/usr/include/x86_64-linux-gnu/c++/11/bits/opt_random.h:
+
+/usr/include/x86_64-linux-gnu/bits/environments.h:
 
 /usr/include/cppconn/statement.h:
 
@@ -3774,10 +3793,6 @@ CMakeFiles/music_search.dir/src/MusicDatabase.cpp.o: ../src/MusicDatabase.cpp \
 
 /usr/include/c++/11/ostream:
 
-/usr/include/openssl/rand.h:
-
-/usr/include/x86_64-linux-gnu/bits/confname.h:
-
 /usr/include/boost/preprocessor/cat.hpp:
 
 /usr/include/x86_64-linux-gnu/bits/siginfo-arch.h:
@@ -3830,10 +3845,6 @@ CMakeFiles/music_search.dir/src/MusicDatabase.cpp.o: ../src/MusicDatabase.cpp \
 
 /usr/include/x86_64-linux-gnu/bits/types/struct_iovec.h:
 
-/usr/include/c++/11/bits/random.tcc:
-
-/usr/include/c++/11/bits/atomic_base.h:
-
 /usr/include/boost/preprocessor/list/detail/fold_right.hpp:
 
 /usr/include/boost/date_time/gregorian/greg_month.hpp:
@@ -3874,6 +3885,10 @@ CMakeFiles/music_search.dir/src/MusicDatabase.cpp.o: ../src/MusicDatabase.cpp \
 
 /usr/include/boost/asio/traits/bulk_execute_member.hpp:
 
+/usr/include/x86_64-linux-gnu/bits/types/struct_sigstack.h:
+
+/usr/include/boost/config.hpp:
+
 /usr/include/boost/operators.hpp:
 
 /usr/include/c++/11/bits/allocator.h:
@@ -3889,8 +3904,6 @@ CMakeFiles/music_search.dir/src/MusicDatabase.cpp.o: ../src/MusicDatabase.cpp \
 /usr/include/c++/11/type_traits:
 
 /usr/include/strings.h:
-
-/usr/include/boost/asio/handler_invoke_hook.hpp:
 
 /usr/include/x86_64-linux-gnu/bits/stdio_lim.h:
 
@@ -3917,6 +3930,16 @@ CMakeFiles/music_search.dir/src/MusicDatabase.cpp.o: ../src/MusicDatabase.cpp \
 /usr/include/openssl/dherr.h:
 
 /usr/include/c++/11/bits/stl_multimap.h:
+
+../include/json.hpp:
+
+/usr/include/boost/asio/detail/handler_tracking.hpp:
+
+/usr/include/boost/asio/traits/execute_free.hpp:
+
+/usr/include/time.h:
+
+/usr/include/x86_64-linux-gnu/bits/getopt_posix.h:
 
 /usr/include/c++/11/bits/stringfwd.h:
 
@@ -3970,15 +3993,7 @@ CMakeFiles/music_search.dir/src/MusicDatabase.cpp.o: ../src/MusicDatabase.cpp \
 
 /usr/include/c++/11/exception:
 
-/usr/include/openssl/sslerr_legacy.h:
-
-/usr/include/boost/asio/traits/submit_member.hpp:
-
 /usr/include/x86_64-linux-gnu/c++/11/bits/cpu_defines.h:
-
-/usr/include/c++/11/bits/std_mutex.h:
-
-/usr/include/c++/11/tr1/poly_laguerre.tcc:
 
 /usr/include/x86_64-linux-gnu/bits/types/struct_itimerspec.h:
 
@@ -4078,17 +4093,15 @@ CMakeFiles/music_search.dir/src/MusicDatabase.cpp.o: ../src/MusicDatabase.cpp \
 
 /usr/include/boost/asio/execution/context.hpp:
 
-/usr/include/boost/asio/detail/io_object_impl.hpp:
-
-/usr/include/x86_64-linux-gnu/bits/signal_ext.h:
-
-/usr/include/x86_64-linux-gnu/bits/types.h:
-
 /usr/include/c++/11/bits/range_access.h:
 
 /usr/include/x86_64-linux-gnu/bits/stdint-intn.h:
 
 /usr/include/c++/11/cctype:
+
+/usr/include/boost/shared_ptr.hpp:
+
+/usr/include/c++/11/iomanip:
 
 /usr/include/x86_64-linux-gnu/sys/select.h:
 
@@ -4106,6 +4119,12 @@ CMakeFiles/music_search.dir/src/MusicDatabase.cpp.o: ../src/MusicDatabase.cpp \
 
 /usr/include/boost/asio/traits/set_done_free.hpp:
 
+/usr/include/boost/mpl/aux_/config/lambda.hpp:
+
+/usr/include/boost/type_traits/is_same.hpp:
+
+/usr/include/c++/11/ext/concurrence.h:
+
 /usr/include/x86_64-linux-gnu/c++/11/bits/gthr-default.h:
 
 /usr/include/pthread.h:
@@ -4113,6 +4132,12 @@ CMakeFiles/music_search.dir/src/MusicDatabase.cpp.o: ../src/MusicDatabase.cpp \
 /usr/include/boost/asio/execution/allocator.hpp:
 
 /usr/include/boost/asio/execution/bulk_guarantee.hpp:
+
+/usr/include/boost/date_time/gregorian/gregorian_types.hpp:
+
+/usr/include/c++/11/bits/locale_facets_nonio.tcc:
+
+/usr/include/boost/asio/detail/push_options.hpp:
 
 /usr/include/boost/mpl/aux_/config/has_xxx.hpp:
 
@@ -4138,9 +4163,7 @@ CMakeFiles/music_search.dir/src/MusicDatabase.cpp.o: ../src/MusicDatabase.cpp \
 
 /usr/include/x86_64-linux-gnu/bits/select.h:
 
-/usr/include/boost/asio/detail/scheduler_operation.hpp:
-
-/usr/include/x86_64-linux-gnu/bits/signum-generic.h:
+/usr/include/pplx/pplxlinux.h:
 
 /usr/include/c++/11/codecvt:
 
@@ -4149,8 +4172,6 @@ CMakeFiles/music_search.dir/src/MusicDatabase.cpp.o: ../src/MusicDatabase.cpp \
 /usr/include/c++/11/bits/allocated_ptr.h:
 
 /usr/include/boost/asio/detail/executor_function.hpp:
-
-/usr/include/pplx/pplxlinux.h:
 
 /usr/include/x86_64-linux-gnu/bits/pthreadtypes.h:
 
@@ -4170,9 +4191,9 @@ CMakeFiles/music_search.dir/src/MusicDatabase.cpp.o: ../src/MusicDatabase.cpp \
 
 /usr/include/c++/11/ext/new_allocator.h:
 
-/usr/include/libintl.h:
-
 /usr/include/c++/11/bits/char_traits.h:
+
+/usr/include/libintl.h:
 
 /usr/include/x86_64-linux-gnu/bits/thread-shared-types.h:
 
@@ -4226,17 +4247,55 @@ CMakeFiles/music_search.dir/src/MusicDatabase.cpp.o: ../src/MusicDatabase.cpp \
 
 /usr/include/c++/11/fstream:
 
-/usr/include/c++/11/array:
+/usr/include/c++/11/condition_variable:
 
-/usr/include/c++/11/tr1/beta_function.tcc:
+/usr/include/x86_64-linux-gnu/bits/sigstksz.h:
 
-/usr/include/boost/asio/associated_allocator.hpp:
+/usr/include/x86_64-linux-gnu/bits/posix_opt.h:
 
-/usr/include/boost/mpl/aux_/config/lambda.hpp:
+/usr/include/openssl/rand.h:
 
-/usr/include/boost/type_traits/is_same.hpp:
+/usr/include/x86_64-linux-gnu/bits/confname.h:
 
-/usr/include/c++/11/ext/concurrence.h:
+/usr/include/c++/11/bits/functexcept.h:
+
+/usr/include/x86_64-linux-gnu/bits/getopt_core.h:
+
+/usr/include/cppconn/driver.h:
+
+/usr/include/boost/numeric/conversion/int_float_mixture_enum.hpp:
+
+/usr/include/openssl/crypto.h:
+
+/usr/include/x86_64-linux-gnu/bits/unistd_ext.h:
+
+/usr/include/c++/11/chrono:
+
+/usr/include/x86_64-linux-gnu/bits/sigthread.h:
+
+/usr/include/boost/asio/detail/io_object_impl.hpp:
+
+/usr/include/x86_64-linux-gnu/bits/types.h:
+
+/usr/include/x86_64-linux-gnu/bits/signal_ext.h:
+
+/usr/include/asm-generic/int-ll64.h:
+
+/usr/include/c++/11/atomic:
+
+/usr/include/c++/11/bits/random.tcc:
+
+/usr/include/c++/11/bits/atomic_base.h:
+
+/usr/include/c++/11/bits/atomic_lockfree_defines.h:
+
+/usr/include/boost/mpl/if.hpp:
+
+/usr/include/boost/asio/execution/sender.hpp:
+
+/usr/include/c++/11/bits/std_mutex.h:
+
+/usr/include/c++/11/tr1/poly_laguerre.tcc:
 
 /usr/include/boost/smart_ptr/scoped_ptr.hpp:
 
@@ -4360,8 +4419,6 @@ CMakeFiles/music_search.dir/src/MusicDatabase.cpp.o: ../src/MusicDatabase.cpp \
 
 /usr/include/c++/11/random:
 
-/usr/include/boost/asio/execution/detail/submit_receiver.hpp:
-
 /usr/include/boost/numeric/conversion/numeric_cast_traits.hpp:
 
 /usr/include/boost/smart_ptr/detail/local_counted_base.hpp:
@@ -4440,6 +4497,10 @@ CMakeFiles/music_search.dir/src/MusicDatabase.cpp.o: ../src/MusicDatabase.cpp \
 
 /usr/include/c++/11/math.h:
 
+/usr/include/boost/asio/detail/global.hpp:
+
+/usr/include/c++/11/bits/stream_iterator.h:
+
 /usr/include/c++/11/cstdio:
 
 /usr/include/boost/asio/detail/non_const_lvalue.hpp:
@@ -4470,12 +4531,6 @@ CMakeFiles/music_search.dir/src/MusicDatabase.cpp.o: ../src/MusicDatabase.cpp \
 
 /usr/include/boost/system/detail/std_interoperability.hpp:
 
-../include/json.hpp:
-
-/usr/include/boost/asio/traits/execute_free.hpp:
-
-/usr/include/boost/asio/detail/handler_tracking.hpp:
-
 /usr/include/boost/date_time/date_duration_types.hpp:
 
 /usr/include/cpprest/details/http_constants.dat:
@@ -4483,10 +4538,6 @@ CMakeFiles/music_search.dir/src/MusicDatabase.cpp.o: ../src/MusicDatabase.cpp \
 /usr/include/boost/asio/detail/base_from_completion_cond.hpp:
 
 /usr/include/boost/asio/ssl.hpp:
-
-/usr/include/c++/11/bits/stream_iterator.h:
-
-/usr/include/boost/asio/detail/global.hpp:
 
 /usr/include/boost/asio/ssl/host_name_verification.hpp:
 
@@ -4502,6 +4553,12 @@ CMakeFiles/music_search.dir/src/MusicDatabase.cpp.o: ../src/MusicDatabase.cpp \
 
 /usr/include/boost/asio/execution.hpp:
 
+/usr/include/boost/asio/detail/op_queue.hpp:
+
+/usr/include/cpprest/asyncrt_utils.h:
+
+/usr/include/c++/11/version:
+
 /usr/include/boost/asio/detail/impl/timer_queue_ptime.ipp:
 
 /usr/include/boost/config/detail/select_platform_config.hpp:
@@ -4509,10 +4566,6 @@ CMakeFiles/music_search.dir/src/MusicDatabase.cpp.o: ../src/MusicDatabase.cpp \
 /usr/include/c++/11/ctime:
 
 /usr/include/boost/system/system_error.hpp:
-
-/usr/include/boost/smart_ptr/detail/sp_convertible.hpp:
-
-/usr/include/boost/config/platform/linux.hpp:
 
 /usr/include/boost/asio/detail/impl/buffer_sequence_adapter.ipp:
 
@@ -4549,8 +4602,6 @@ CMakeFiles/music_search.dir/src/MusicDatabase.cpp.o: ../src/MusicDatabase.cpp \
 /usr/include/boost/asio/detail/type_traits.hpp:
 
 /usr/include/boost/detail/workaround.hpp:
-
-/usr/include/boost/asio/detail/push_options.hpp:
 
 /usr/include/boost/asio/detail/pop_options.hpp:
 
@@ -4736,6 +4787,16 @@ CMakeFiles/music_search.dir/src/MusicDatabase.cpp.o: ../src/MusicDatabase.cpp \
 
 /usr/include/boost/asio/execution/blocking_adaptation.hpp:
 
+/usr/include/boost/mpl/aux_/largest_int.hpp:
+
+/usr/include/boost/preprocessor/control/iif.hpp:
+
+/usr/include/boost/asio/detail/fenced_block.hpp:
+
+/usr/include/c++/11/bits/enable_special_members.h:
+
+/usr/include/boost/asio/detail/impl/posix_event.ipp:
+
 /usr/include/c++/11/forward_list:
 
 /usr/include/boost/core/enable_if.hpp:
@@ -4747,8 +4808,6 @@ CMakeFiles/music_search.dir/src/MusicDatabase.cpp.o: ../src/MusicDatabase.cpp \
 /usr/include/boost/asio/ssl/detail/buffered_handshake_op.hpp:
 
 /usr/include/boost/cerrno.hpp:
-
-/usr/include/boost/system/detail/system_category_posix.hpp:
 
 /usr/include/c++/11/cassert:
 
@@ -4769,8 +4828,6 @@ CMakeFiles/music_search.dir/src/MusicDatabase.cpp.o: ../src/MusicDatabase.cpp \
 /usr/include/c++/11/bits/exception_defines.h:
 
 /usr/include/x86_64-linux-gnu/bits/socket_type.h:
-
-/usr/include/boost/asio/impl/system_executor.hpp:
 
 /usr/include/x86_64-linux-gnu/bits/sockaddr.h:
 
@@ -4796,9 +4853,9 @@ CMakeFiles/music_search.dir/src/MusicDatabase.cpp.o: ../src/MusicDatabase.cpp \
 
 /usr/include/boost/asio/detail/posix_mutex.hpp:
 
-/usr/include/c++/11/bits/locale_conv.h:
-
 /usr/include/boost/asio/ip/bad_address_cast.hpp:
+
+/usr/include/c++/11/bits/locale_conv.h:
 
 /usr/include/boost/asio/execution/bulk_execute.hpp:
 
@@ -4817,25 +4874,3 @@ CMakeFiles/music_search.dir/src/MusicDatabase.cpp.o: ../src/MusicDatabase.cpp \
 /usr/include/x86_64-linux-gnu/bits/sigevent-consts.h:
 
 /usr/include/boost/asio/execution/prefer_only.hpp:
-
-/usr/include/c++/11/bits/uniform_int_dist.h:
-
-/usr/include/boost/asio/traits/submit_free.hpp:
-
-/usr/include/boost/mpl/aux_/largest_int.hpp:
-
-/usr/include/boost/preprocessor/control/iif.hpp:
-
-/usr/include/c++/11/bits/enable_special_members.h:
-
-/usr/include/boost/asio/detail/impl/posix_event.ipp:
-
-/usr/include/boost/asio/detail/fenced_block.hpp:
-
-/usr/include/boost/asio/detail/handler_invoke_helpers.hpp:
-
-/usr/include/cpprest/asyncrt_utils.h:
-
-/usr/include/c++/11/version:
-
-/usr/include/boost/asio/detail/op_queue.hpp:

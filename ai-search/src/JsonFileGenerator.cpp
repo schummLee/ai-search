@@ -7,19 +7,7 @@
 #include "json.hpp"
 using json = nlohmann::json;
 
-struct MusicData {
-    int songsPlayed;
-    struct MostPlayed {
-        long long lastPlayed;
-        int playCount;
-        bool isYoutube;
-        std::string title;
-        std::string artist;
-        std::string album;
-        std::string id;
-    } mostPlayed;
-    std::string name;
-};
+
 
 JsonFileGenerator::JsonFileGenerator() {}
 
@@ -37,7 +25,7 @@ bool JsonFileGenerator::generateJsonFile(const std::string& jsonStr, const std::
     }
 }
 
-bool readJsonFile(const std::string& filename, MusicData& data) {
+bool readJsonFile(const std::string& filename, std::vector<MusicData>& dataList) {
     try {
         std::ifstream file(filename);
         if (!file.is_open()) {
@@ -48,7 +36,8 @@ bool readJsonFile(const std::string& filename, MusicData& data) {
         json jsonData;
         file >> jsonData;
 
-        // Extract data from JSON
+        // Create a MusicData object and populate it with JSON data
+        MusicData data;
         data.songsPlayed = jsonData["songsPlayed"];
         data.name = jsonData["name"];
         data.mostPlayed.lastPlayed = jsonData["mostPlayed"]["lastPlayed"];
@@ -59,9 +48,42 @@ bool readJsonFile(const std::string& filename, MusicData& data) {
         data.mostPlayed.album = jsonData["mostPlayed"]["album"];
         data.mostPlayed.id = jsonData["mostPlayed"]["id"];
 
+        dataList.push_back(data); // Push back the MusicData object into the vector
+
         return true;
     } catch (const std::exception& e) {
         std::cerr << "Error while reading JSON file: " << e.what() << std::endl;
         return false;
+    }
+}
+
+
+// Function to read the largest number from JSON file names
+std::string readLargestNumberFromFile() {
+    try {
+        int largestNumber = std::numeric_limits<int>::min();
+        for (const auto& entry : std::filesystem::directory_iterator("../upload/static")) {
+            if (entry.is_regular_file()) {
+                std::string filename = entry.path().filename().stem().string(); // Extract filename without extension
+                try {
+                    int number = std::stoi(filename);
+                    if (number > largestNumber) {
+                        largestNumber = number;
+                    }
+                } catch (const std::invalid_argument& e) {
+                    // Ignore files with invalid number format
+                }
+            }
+        }
+
+        if (largestNumber == std::numeric_limits<int>::min()) {
+            std::cerr << "No valid JSON files found in the directory." << std::endl;
+            return ""; // Return empty string if no valid files found
+        }
+
+        return std::to_string(largestNumber); // Convert largest number to string
+    } catch (const std::exception& e) {
+        std::cerr << "Error while reading directory: " << e.what() << std::endl;
+        return ""; // Return empty string in case of error
     }
 }

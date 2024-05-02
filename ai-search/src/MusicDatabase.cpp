@@ -68,6 +68,52 @@ std::vector<MusicTrack> MusicDatabase::loadFromMySQL(const std::string& host, co
     return tracks;
 }
 
+std::vector<MusicTrack> MusicDatabase::PassToMySQL(const std::string& host, const std::string& user, const std::string& password, const std::string& database, const std::vector<MusicTrack>& tracks) {
+    std::vector<MusicTrack> insertedTracks;
+
+    try {
+        sql::mysql::MySQL_Driver *driver;
+        sql::Connection *con;
+        sql::PreparedStatement *pstmt;
+
+        driver = sql::mysql::get_mysql_driver_instance();
+        if (!driver) {
+            std::cerr << "Failed to get MySQL driver instance" << std::endl;
+            return insertedTracks; // Return empty vector
+        }
+
+        con = driver->connect(host, user, password);
+        if (!con) {
+            std::cerr << "Failed to connect to MySQL server" << std::endl;
+            return insertedTracks; // Return empty vector
+        }
+
+        con->setSchema(database);
+
+        // Prepare the insert statement
+        pstmt = con->prepareStatement("INSERT INTO u_user (title, artist, count) VALUES (?, ?, ?)");
+
+        // Insert each track into the database
+        for (const auto& track : tracks) {
+            pstmt->setString(1, track.title);
+            pstmt->setString(2, track.artist);
+            // For demonstration purposes, let's assume count corresponds to a field in the database
+            // If not, you'll need to adjust this part accordingly
+            pstmt->setInt(3, std::stoi(track.genre)); // Assuming genre is the count in this example
+            pstmt->execute();
+            insertedTracks.push_back(track);
+        }
+
+        delete pstmt;
+        delete con;
+
+    } catch (const sql::SQLException& e) {
+        std::cerr << "MySQL Error: " << e.what() << std::endl;
+    }
+
+    return insertedTracks;
+}
+
 // Implementation of the condition search function
 std::vector<MusicTrack> MusicDatabase::searchByCondition(const std::string& condition) const {
     // Sample implementation: search by genre

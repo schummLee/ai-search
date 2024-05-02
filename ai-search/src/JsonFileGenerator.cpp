@@ -1,10 +1,10 @@
-#include "JsonFileGenerator.h"
+#include "../include/JsonFileGenerator.h"
 #include <iostream>
 #include <fstream>
 #include <vector>
 #include <sstream>
 #include <string>
-#include "json.hpp"
+#include "../include/json.hpp"
 using json = nlohmann::json;
 
 
@@ -25,7 +25,7 @@ bool JsonFileGenerator::generateJsonFile(const std::string& jsonStr, const std::
     }
 }
 
-bool readJsonFile(const std::string& filename, std::vector<MusicData>& dataList) {
+bool JsonFileGenerator::readJsonFile(const std::string& filename, std::vector<MusicData>& dataList) {
     try {
         std::ifstream file(filename);
         if (!file.is_open()) {
@@ -59,7 +59,7 @@ bool readJsonFile(const std::string& filename, std::vector<MusicData>& dataList)
 
 
 // Function to read the largest number from JSON file names
-std::string readLargestNumberFromFile() {
+std::string JsonFileGenerator::readLargestNumberFromFile() {
     try {
         int largestNumber = std::numeric_limits<int>::min();
         for (const auto& entry : std::filesystem::directory_iterator("../upload/static")) {

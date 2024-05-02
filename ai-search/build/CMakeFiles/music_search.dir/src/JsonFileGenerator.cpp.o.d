@@ -1,7 +1,7 @@
 CMakeFiles/music_search.dir/src/JsonFileGenerator.cpp.o: \
  /mnt/d/code/ai-search/ai-search/src/JsonFileGenerator.cpp \
  /usr/include/stdc-predef.h \
- /mnt/d/code/ai-search/ai-search/include/JsonFileGenerator.h \
+ /mnt/d/code/ai-search/ai-search/src/../include/JsonFileGenerator.h \
  /usr/include/c++/11/string \
  /usr/include/x86_64-linux-gnu/c++/11/bits/c++config.h \
  /usr/include/x86_64-linux-gnu/c++/11/bits/os_defines.h \
@@ -182,7 +182,7 @@ CMakeFiles/music_search.dir/src/JsonFileGenerator.cpp.o: \
  /usr/include/x86_64-linux-gnu/c++/11/bits/basic_file.h \
  /usr/include/x86_64-linux-gnu/c++/11/bits/c++io.h \
  /usr/include/c++/11/bits/fstream.tcc \
- /mnt/d/code/ai-search/ai-search/include/json.hpp \
+ /mnt/d/code/ai-search/ai-search/src/../include/json.hpp \
  /usr/include/c++/11/algorithm /usr/include/c++/11/bits/stl_algo.h \
  /usr/include/c++/11/bits/algorithmfwd.h \
  /usr/include/c++/11/bits/stl_heap.h \

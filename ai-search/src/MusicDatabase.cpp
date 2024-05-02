@@ -94,14 +94,14 @@ std::vector<UserData> MusicDatabase::PassToMySQL(const std::string& host, const 
         pstmt = con->prepareStatement("INSERT INTO u_user (name, song, count) VALUES (?, ?, ?)");
 
         // Insert each track into the database
-        for (const auto& data : datas) {
-            pstmt->setString(1, data.name);
-            pstmt->setString(2, data.song);
+        
+        pstmt->setString(1, datas.name);
+        pstmt->setString(2, datas.song);
             
-            pstmt->setInt(3, data.count); 
-            pstmt->execute();
-            insertedDatas.push_back(data);
-        }
+        pstmt->setInt(3, datas.count); 
+        pstmt->execute();
+        insertedDatas.push_back(datas);
+        
 
         delete pstmt;
         delete con;

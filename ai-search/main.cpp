@@ -15,7 +15,7 @@ int main() {
     // Create an instance of MusicDatabase
     MusicDatabase musicDB;
     std::vector<MusicTrack> titleResults;
-    JsonFileGenerator jsonExec;
+    JsonFileGenerator fileGenerator;
 
     // Connect to MySQL database and load music data
     std::string host = "localhost";   // Hostname or IP address of the MySQL server
@@ -44,14 +44,14 @@ int main() {
         // Prompt the user to input a title
         std::cout << "Enter a title to search (or press 'q' to quit): ";
         std::getline(std::cin, userInput);
-
+        
         // Check if the user wants to quit
         if (userInput == "q") {
             break;
         }
 
         // Read the largest number from JSON file names
-    std::string largestNumber = jsonExec.readLargestNumberFromFile();
+    std::string largestNumber = fileGenerator.readLargestNumberFromFile();
     if (largestNumber.empty()) {
         std::cerr << "Failed to read largest number from JSON file names." << std::endl;
         return 1; // Return error code
@@ -62,7 +62,7 @@ int main() {
     UserData threeDatas;
     std::vector<UserData> insertedData;
 
-    if (!jsonExec.readJsonFile(largestNumber + ".json", musicDataList)) {
+    if (!fileGenerator.readJsonFile(largestNumber + ".json", musicDataList)) {
         std::cerr << "Failed to read JSON file." << std::endl;
         return 1; // Return error code
     }
@@ -117,7 +117,7 @@ int main() {
         std::cout << jsonStr << std::endl;
         system(command.c_str());
 
-        JsonFileGenerator fileGenerator;
+        
 
         // Generate the JSON file
         std::string filename = "output.json";

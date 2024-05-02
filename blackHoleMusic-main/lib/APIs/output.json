@@ -1,0 +1,52 @@
+[
+  {
+    "artist": "Queen",
+    "genre": "Rock",
+    "title": "Bohemian Rhapsody"
+  },
+  {
+    "artist": "Nirvana",
+    "genre": "Grunge",
+    "title": "Smells Like Teen Spirit"
+  },
+  {
+    "artist": "Led Zeppelin",
+    "genre": "Rock",
+    "title": "Stairway to Heaven"
+  },
+  {
+    "artist": "Eagles",
+    "genre": "Rock",
+    "title": "Hotel California"
+  },
+  {
+    "artist": "John Lennon",
+    "genre": "Pop",
+    "title": "Imagine"
+  },
+  {
+    "artist": "The Beatles",
+    "genre": "Pop",
+    "title": "Hey Jude"
+  },
+  {
+    "artist": "Bob Dylan",
+    "genre": "Rock",
+    "title": "Like a Rolling Stone"
+  },
+  {
+    "artist": "Michael Jackson",
+    "genre": "Pop",
+    "title": "Billie Jean"
+  },
+  {
+    "artist": "Guns N Roses",
+    "genre": "Rock",
+    "title": "Sweet Child o Mine"
+  },
+  {
+    "artist": "Journey",
+    "genre": "Rock",
+    "title": "Don't Stop Believin'"
+  }
+]

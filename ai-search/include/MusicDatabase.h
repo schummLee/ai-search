@@ -13,6 +13,11 @@ struct MusicTrack {
     std::string artist;
     std::string genre;
 };
+struct UserData {
+    std::string name;
+    std::string song;
+    int count;
+};
 
 class MusicDatabase {
 public:
@@ -21,7 +26,7 @@ public:
 
     bool loadFromCSV(const std::string& filename); // Load music data from a CSV file
     std::vector<MusicTrack> loadFromMySQL(const std::string& host, const std::string& user, const std::string& password, const std::string& database); // Load music data from MySQL
-    std::vector<MusicTrack> PassToMySQL(const std::string& host, const std::string& user, const std::string& password, const std::string& database, const std::vector<MusicTrack>& tracks);
+    std::vector<UserData> PassToMySQL(const std::string& host, const std::string& user, const std::string& password, const std::string& database, const std::vector<UserData>& datas);
 
     std::vector<MusicTrack> searchByCondition(const std::string& condition) const; // Search by condition
     std::vector<MusicTrack> searchByPersonalReferences(const std::string& reference) const; // Search by personal references

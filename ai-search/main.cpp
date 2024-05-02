@@ -120,7 +120,7 @@ int main() {
         
 
         // Generate the JSON file
-        std::string filename = "output.json";
+        std::string filename = "../../drop/assets/output.json";
         if (fileGenerator.generateJsonFile(jsonStr, filename)) {
             std::cout << "JSON file generated successfully." << std::endl;
         } else {

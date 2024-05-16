@@ -1,0 +1,10 @@
+name: lint
+version: 2.3.0
+description: An opinionated, community-driven set of lint rules for Dart and Flutter projects. Like pedantic but stricter
+repository: https://github.com/passsy/dart-lint
+issue_tracker: https://github.com/passsy/dart-lint/issues
+topics:
+  - lint
+
+environment:
+  sdk: '>=3.2.0 <4.0.0'

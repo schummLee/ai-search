@@ -1,0 +1,6 @@
+##
+# Lint rules to be used for apps without developer facing API. i.e. command line tools and Flutter applications
+##
+
+# Deprecated, use `include: package:lint/strict.yaml` instead
+include: package:lint/strict.yaml

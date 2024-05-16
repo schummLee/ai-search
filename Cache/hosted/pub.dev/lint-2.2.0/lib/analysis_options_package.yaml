@@ -1,0 +1,6 @@
+##
+# Lint rules to be used for packages, which provide a dart API for developers
+##
+
+# Deprecated, use `include: package:lint/package.yaml` instead
+include: package:lint/package.yaml

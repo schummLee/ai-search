@@ -1,0 +1,2 @@
+C:/Users/Leah0/AppData/Local/Pub/Cache/hosted/pub.dev/metadata_god-0.5.2+1/android/.cxx/Debug/4h6xn3b5/armeabi-v7a/CMakeFiles/edit_cache.dir
+C:/Users/Leah0/AppData/Local/Pub/Cache/hosted/pub.dev/metadata_god-0.5.2+1/android/.cxx/Debug/4h6xn3b5/armeabi-v7a/CMakeFiles/rebuild_cache.dir
